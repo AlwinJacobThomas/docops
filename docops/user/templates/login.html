@@ -2,6 +2,44 @@
 {% load static %}
 
 {% block title %}Login{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'user/style.css' %}">
+<script src="{% static 'user/script.js' %}"></script>
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+{% endblock %}
 {% block content %}
-    Login
+<section class="container forms">
+    <div class="form login">
+        <div class="form-content">
+            <header>Login</header>
+            <form action="#">
+                <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input">
+                </div>
+
+                <div class="field input-field">
+                    <input type="password" placeholder="Password" class="password">
+                    <i class='bx bx-hide eye-icon'></i>
+                </div>
+
+                <div class="form-link">
+                    <a href="#" class="forgot-pass">Forgot password?</a>
+                </div>
+
+                <div class="field button-field">
+                    <button>Login</button>
+                </div>
+            </form>
+
+            <div class="form-link">
+                <span>Don't have an account? <a href="{% url 'user:signup' %}" class="link signup-link">Signup</a></span>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+</section>
 {% endblock %}
