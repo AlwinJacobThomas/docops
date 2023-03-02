@@ -79,13 +79,13 @@ form{
     cursor: pointer;
     padding: 5px;
 }
-.field button{
+.field .btn{
     color: #fff;
     background-color: #0171d3;
     transition: all 0.3s ease;
     cursor: pointer;
 }
-.field button:hover{
+.field .btn:hover{
     background-color: #016dcb;
 }
 .form-link{
@@ -142,7 +142,7 @@ a.facebook{
     justify-content: center;
     background-color: #fff;
 }
-.icon,
+.icon
 {
     position: absolute;
     top: 50%;

@@ -13,22 +13,28 @@
     <div class="form login">
         <div class="form-content">
             <header>Signup</header>
-            <form action="#">
+            <form action="" method="post">{%  csrf_token %}
                 <div class="field input-field">
-                    <input type="email" placeholder="Email" class="input">
+                    {{form.email.errors}}
+                    <!-- <input type="email" placeholder="Email" class="input" name="email"> -->
+                    {{form.email}}
                 </div>
 
                 <div class="field input-field">
-                    <input type="password" placeholder="Create password" class="password">
+                    {{form.password1.errors}}
+                    <!-- <input type="password" placeholder="Create password" class="password" name="password1"> -->
+                    {{form.password1}}
                 </div>
 
                 <div class="field input-field">
-                    <input type="password" placeholder="Confirm password" class="password">
+                    <!-- <input type="password" placeholder="Confirm password" class="password" name="password2"> -->
+                    {{form.password2.errors}}
+                    {{form.password2}}
                     <i class='bx bx-hide eye-icon'></i>
                 </div>
 
                 <div class="field button-field">
-                    <button>Signup</button>
+                    <input type="submit" value="Signup" class="btn">
                 </div>
             </form>
 
