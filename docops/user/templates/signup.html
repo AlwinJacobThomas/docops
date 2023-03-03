@@ -13,26 +13,26 @@
     <div class="form login">
         <div class="form-content">
             <header>Signup</header>
-            <form action="" method="post">{%  csrf_token %}
+            <form action="" method="post">{% csrf_token %}
+                {% if error == True %}
+                <span style="color: red">{{form.errors}}</span>
+                {% endif %}
                 <div class="field input-field">
-                    {{form.email.errors}}
-                    <!-- <input type="email" placeholder="Email" class="input" name="email"> -->
+
                     {{form.email}}
+
                 </div>
 
                 <div class="field input-field">
-                    {{form.password1.errors}}
-                    <!-- <input type="password" placeholder="Create password" class="password" name="password1"> -->
+
                     {{form.password1}}
+
                 </div>
 
                 <div class="field input-field">
-                    <!-- <input type="password" placeholder="Confirm password" class="password" name="password2"> -->
-                    {{form.password2.errors}}
                     {{form.password2}}
                     <i class='bx bx-hide eye-icon'></i>
                 </div>
-
                 <div class="field button-field">
                     <input type="submit" value="Signup" class="btn">
                 </div>
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-       
+
 
     </div>
 </section>

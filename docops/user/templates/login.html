@@ -13,14 +13,20 @@
     <div class="form login">
         <div class="form-content">
             <header>Login</header>
-            <form action="#">
-                {{form.email.errors}}
+            <form action="#" method="post">
+                {% csrf_token %}
+                {% if error == True %}
+                <span style="color: red">
+                    {{form.errors}}
+                </span>
+                {% endif %}
+
                 <div class="field input-field">
-                    {{form.email}}
+                    {{form.username}}
                 </div>
 
                 <div class="field input-field">
-                    <input type="password" placeholder="Password" class="password" name="password">
+                    {{form.password}}
                     <i class='bx bx-hide eye-icon'></i>
                 </div>
 
